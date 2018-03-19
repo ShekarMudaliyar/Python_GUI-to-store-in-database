@@ -4,7 +4,7 @@ from tkinter import messagebox as msg
 
 con=Connect(user='root',password='123456',host='127.0.0.1')
 cur=con.cursor()
-cur.execute('use database')
+cur.execute('use data')  #data is the database name
 def sub():
     cur.execute("insert into stud values('"+name.get()+"',"+str(rollno.get())+",'"+add.get()+"',"+str(pno.get())+");")
     cur.close()
